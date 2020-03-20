@@ -34,7 +34,8 @@ public class CartDAO {
         String sql = "SELECT cart_id, book_id, book_name, book_author, book_price " +
                 "FROM cart " +
                 "INNER JOIN books " +
-                "ON cart.cart_book_id = books.book_id";
+                "ON cart.cart_book_id = books.book_id " +
+                "ORDER BY cart_id ASC";
 
         Statement statement = null;
         ResultSet resultSet = null;
